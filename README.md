@@ -26,5 +26,5 @@ python -m spacy download es_core_news_lg
 ## Uso
 
 ```bash
-python main.py --input data/sample_reviews.csv
+python main.py --input data/resenas_clientes.csv
 ```

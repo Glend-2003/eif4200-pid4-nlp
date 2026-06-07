@@ -14,7 +14,7 @@ _COLUMNAS_TEXTO = {"review", "comment", "text", "comentario", "reseña"}
 
 def load_data(filepath: str) -> list:
     """
-    Carga reseñas desde un archivo CSV, Excel o TXT.
+    Carga reseñas desde un archivo CSV, Excel, JSON o TXT.
 
     Detecta automáticamente la columna de texto en archivos tabulares.
     Retorna una lista de strings con el contenido de cada fila o línea.
@@ -31,10 +31,12 @@ def load_data(filepath: str) -> list:
             return _load_csv(filepath)
         elif ext in (".xlsx", ".xls"):
             return _load_excel(filepath)
+        elif ext == ".json":
+            return _load_json(filepath)
         elif ext == ".txt":
             return _load_txt(filepath)
         else:
-            logger.error(f"Formato no soportado: '{ext}'. Use CSV, Excel o TXT.")
+            logger.error(f"Formato no soportado: '{ext}'. Use CSV, Excel, JSON o TXT.")
             return []
     except Exception as e:
         logger.error(f"Error inesperado al cargar '{filepath}': {e}")
@@ -93,6 +95,83 @@ def _load_excel(filepath: str) -> list:
         return []
     except Exception as e:
         logger.error(f"Error al leer Excel '{filepath}': {e}")
+        return []
+
+
+def _load_json(filepath: str) -> list:
+    """
+    Carga un archivo JSON con reseñas y extrae el texto de cada registro.
+
+    Soporta tres estructuras comunes de auditoría de clientes:
+        - Lista de textos:        ["reseña 1", "reseña 2", ...]
+        - Lista de objetos:       [{"review": "..."}, {"comentario": "..."}, ...]
+        - Objeto que envuelve la lista: {"reviews": [ ... ]}
+
+    Args:
+        filepath: Ruta al archivo JSON.
+
+    Returns:
+        Lista de strings con las reseñas. Lista vacía si falla.
+    """
+    import json
+    try:
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except UnicodeDecodeError:
+            # Reintento con codificación latin-1
+            with open(filepath, "r", encoding="latin-1") as f:
+                data = json.load(f)
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON inválido en '{filepath}': {e}")
+        return []
+    except Exception as e:
+        logger.error(f"Error al leer JSON '{filepath}': {e}")
+        return []
+
+    return _extract_from_json(data)
+
+
+def _extract_from_json(data) -> list:
+    """
+    Normaliza una estructura JSON ya parseada a una lista de reseñas.
+
+    Args:
+        data: Objeto Python resultante de json.load (dict o list).
+
+    Returns:
+        Lista de strings con las reseñas.
+    """
+    # Si es un dict, buscamos la primera lista anidada (ej. {"reviews": [...]});
+    # si no hay ninguna, lo tratamos como un registro único.
+    if isinstance(data, dict):
+        anidada = next((v for v in data.values() if isinstance(v, list)), None)
+        data = anidada if anidada is not None else [data]
+
+    if not isinstance(data, list):
+        logger.error("Estructura JSON no soportada. Se espera una lista de reseñas u objetos.")
+        return []
+
+    if not data:
+        logger.warning("El archivo JSON no contiene registros.")
+        return []
+
+    # Caso 1: lista de strings.
+    if all(isinstance(x, str) for x in data):
+        registros = [x for x in data if x.strip()]
+        logger.info(f"JSON cargado — {len(registros)} reseñas (lista de texto).")
+        return registros
+
+    # Caso 2: lista de objetos -> reutilizamos la detección de columna de pandas.
+    try:
+        import pandas as pd
+        df = pd.DataFrame(data)
+        col = _find_text_column(df)
+        registros = df[col].dropna().astype(str).tolist()
+        logger.info(f"JSON cargado — campo '{col}', {len(registros)} registros.")
+        return registros
+    except Exception as e:
+        logger.error(f"No se pudo interpretar el JSON como tabla de objetos: {e}")
         return []
 
 

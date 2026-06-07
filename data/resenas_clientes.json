@@ -1,0 +1,244 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "fecha": "2026-05-02",
+      "producto": "Audífonos Bluetooth",
+      "comentario": "Envío rápido, el producto llegó en dos días y en perfecto estado. Muy recomendable."
+    },
+    {
+      "id": 2,
+      "fecha": "2026-05-02",
+      "producto": "Cargador USB-C",
+      "comentario": "Pésima atención al cliente, llevo una semana esperando respuesta y nadie contesta."
+    },
+    {
+      "id": 3,
+      "fecha": "2026-05-03",
+      "producto": "Mochila antirrobo",
+      "comentario": "La calidad es aceptable para el precio que pagué, cumple su función sin problemas."
+    },
+    {
+      "id": 4,
+      "fecha": "2026-05-03",
+      "producto": "Smartwatch deportivo",
+      "comentario": "No es bueno, esperaba mucho más por lo que costó. Me decepcionó bastante."
+    },
+    {
+      "id": 5,
+      "fecha": "2026-05-04",
+      "producto": "Teclado mecánico",
+      "comentario": "Es bueno el producto, hace exactamente lo que promete y se siente sólido."
+    },
+    {
+      "id": 6,
+      "fecha": "2026-05-04",
+      "producto": "Cafetera express",
+      "comentario": "El empaque venía dañado pero el artículo funciona bien, así que lo dejo pasar."
+    },
+    {
+      "id": 7,
+      "fecha": "2026-05-05",
+      "producto": "Audífonos Bluetooth",
+      "comentario": "Excelente calidad, superó todas mis expectativas. Sin duda volveré a comprar aquí."
+    },
+    {
+      "id": 8,
+      "fecha": "2026-05-05",
+      "producto": "Zapatillas running",
+      "comentario": "Llegó tarde y encima el color no era el que pedí. Muy molesto con la experiencia."
+    },
+    {
+      "id": 9,
+      "fecha": "2026-05-06",
+      "producto": "Mouse inalámbrico",
+      "comentario": "Producto regular, ni bueno ni malo, simplemente normal para el uso diario."
+    },
+    {
+      "id": 10,
+      "fecha": "2026-05-06",
+      "producto": "Smartwatch deportivo",
+      "comentario": "Me encantó, el material se siente premium y el acabado es impecable. Compra perfecta."
+    },
+    {
+      "id": 11,
+      "fecha": "2026-05-07",
+      "producto": "Cafetera express",
+      "comentario": "Terrible experiencia, el producto se dañó a la semana de uso. No lo recomiendo."
+    },
+    {
+      "id": 12,
+      "fecha": "2026-05-07",
+      "producto": "Cargador USB-C",
+      "comentario": "Buena relación calidad precio, lo recomiendo para el uso de todos los días."
+    },
+    {
+      "id": 13,
+      "fecha": "2026-05-08",
+      "producto": "Lámpara LED",
+      "comentario": "No lo recomiendo, dejó de funcionar después de tres días. Una verdadera lástima."
+    },
+    {
+      "id": 14,
+      "fecha": "2026-05-08",
+      "producto": "Mochila antirrobo",
+      "comentario": "La entrega fue puntual y el vendedor muy amable durante todo el proceso de compra."
+    },
+    {
+      "id": 15,
+      "fecha": "2026-05-09",
+      "producto": "Teclado mecánico",
+      "comentario": "Esperaba algo mejor, las fotos no coinciden con el producto real. Me siento engañado."
+    },
+    {
+      "id": 16,
+      "fecha": "2026-05-09",
+      "producto": "Mouse inalámbrico",
+      "comentario": "Cumple con lo básico, nada del otro mundo pero sirve para lo que lo necesito."
+    },
+    {
+      "id": 17,
+      "fecha": "2026-05-10",
+      "producto": "Soporte técnico",
+      "comentario": "Excelente servicio, me atendieron en minutos y quedé muy satisfecho con la solución."
+    },
+    {
+      "id": 18,
+      "fecha": "2026-05-10",
+      "producto": "Zapatillas running",
+      "comentario": "El paquete llegó incompleto, faltaban piezas importantes. Muy mala organización."
+    },
+    {
+      "id": 19,
+      "fecha": "2026-05-11",
+      "producto": "Lámpara LED",
+      "comentario": "Funciona correctamente, sin quejas hasta el momento. Hace su trabajo."
+    },
+    {
+      "id": 20,
+      "fecha": "2026-05-11",
+      "producto": "Audífonos Bluetooth",
+      "comentario": "Genial, otro pedido que llega roto. Justo lo que necesitaba para alegrarme el día."
+    },
+    {
+      "id": 21,
+      "fecha": "2026-05-12",
+      "producto": "Cargador USB-C",
+      "comentario": "Muy contento con la compra, el envío fue gratis y más rápido de lo esperado."
+    },
+    {
+      "id": 22,
+      "fecha": "2026-05-12",
+      "producto": "Smartwatch deportivo",
+      "comentario": "Atención deficiente, me trataron muy mal cuando intenté reclamar la garantía."
+    },
+    {
+      "id": 23,
+      "fecha": "2026-05-13",
+      "producto": "Cafetera express",
+      "comentario": "Producto de buena calidad, aunque el precio me pareció algo elevado para lo que ofrece."
+    },
+    {
+      "id": 24,
+      "fecha": "2026-05-13",
+      "producto": "Mochila antirrobo",
+      "comentario": "No está mal, pero he visto mejores opciones por menos dinero en otras tiendas."
+    },
+    {
+      "id": 25,
+      "fecha": "2026-05-14",
+      "producto": "Teclado mecánico",
+      "comentario": "Fantástico, llegó antes de lo esperado y muy bien protegido en su empaque."
+    },
+    {
+      "id": 26,
+      "fecha": "2026-05-14",
+      "producto": "Mouse inalámbrico",
+      "comentario": "Decepcionante, el material se siente barato y frágil. No durará mucho tiempo."
+    },
+    {
+      "id": 27,
+      "fecha": "2026-05-15",
+      "producto": "Soporte técnico",
+      "comentario": "Recomiendo totalmente esta tienda, siempre cumplen con lo que prometen."
+    },
+    {
+      "id": 28,
+      "fecha": "2026-05-15",
+      "producto": "Smartwatch deportivo",
+      "comentario": "El producto es correcto pero la aplicación que lo controla falla demasiado."
+    },
+    {
+      "id": 29,
+      "fecha": "2026-05-16",
+      "producto": "Lámpara LED",
+      "comentario": "Maravilloso regalo, a mi hija le encantó. Una compra perfecta para la ocasión."
+    },
+    {
+      "id": 30,
+      "fecha": "2026-05-16",
+      "producto": "Zapatillas running",
+      "comentario": "Una estafa, cobran envío express y al final tardó dos semanas en llegar."
+    },
+    {
+      "id": 31,
+      "fecha": "2026-05-17",
+      "producto": "Mochila antirrobo",
+      "comentario": "Calidad sólida, llevo meses usándola y sigue como nueva. Excelente inversión."
+    },
+    {
+      "id": 32,
+      "fecha": "2026-05-17",
+      "producto": "Cafetera express",
+      "comentario": "Llegó con un rayón pequeño pero por lo demás está bien y funciona correctamente."
+    },
+    {
+      "id": 33,
+      "fecha": "2026-05-18",
+      "producto": "Cargador USB-C",
+      "comentario": "Excelente, otro artículo defectuoso. Gracias por nada, vendedor de confianza."
+    },
+    {
+      "id": 34,
+      "fecha": "2026-05-18",
+      "producto": "Soporte técnico",
+      "comentario": "Servicio rápido y eficiente, resolvieron mi caso sin demoras. Repetiré sin dudarlo."
+    },
+    {
+      "id": 35,
+      "fecha": "2026-05-19",
+      "producto": "Smartwatch deportivo",
+      "comentario": "No vale lo que cuesta, me siento engañado con esta compra tan cara."
+    },
+    {
+      "id": 36,
+      "fecha": "2026-05-19",
+      "producto": "Audífonos Bluetooth",
+      "comentario": "El envío demoró un poco pero el producto valió completamente la espera."
+    },
+    {
+      "id": 37,
+      "fecha": "2026-05-20",
+      "producto": "Mouse inalámbrico",
+      "comentario": "Empaque sencillo, producto tal cual se describe. Todo normal, sin sorpresas."
+    },
+    {
+      "id": 38,
+      "fecha": "2026-05-20",
+      "producto": "Lámpara LED",
+      "comentario": "Horrible, el soporte técnico nunca respondió mis correos. Pésimo seguimiento."
+    },
+    {
+      "id": 39,
+      "fecha": "2026-05-21",
+      "producto": "Zapatillas running",
+      "comentario": "Súper cómodas y de excelente acabado, las amo. Mejor compra del mes sin duda."
+    },
+    {
+      "id": 40,
+      "fecha": "2026-05-21",
+      "producto": "Cafetera express",
+      "comentario": "Aceptable, cumple su función aunque la jarra es más pequeña de lo que esperaba."
+    }
+  ]
+}

@@ -59,12 +59,15 @@ pip install https://github.com/explosion/spacy-models/releases/download/es_core_
 ## 5. Ejecutar el programa
 
 ```bash
-python main.py --input data/sample_reviews.csv
+python main.py --input data/resenas_clientes.csv
 ```
 
 También puedes usar tu propio archivo:
 
 ```bash
+# Con archivo JSON (lista de objetos o de textos)
+python main.py --input data/resenas_clientes.json
+
 # Con archivo TXT (un comentario por línea)
 python main.py --input data/mis_reviews.txt
 
@@ -98,13 +101,13 @@ start output\sentiment_chart.png
 =======================================================
  PIPELINE DE ANÁLISIS DE SENTIMIENTO — PLN
 =======================================================
- Archivo: data/sample_reviews.csv
- 10 comentarios cargados.
+ Archivo: data/resenas_clientes.csv
+ 40 comentarios cargados.
 
 #    ORIGINAL                  LEMATIZADO           SENTIMIENTO  SCORE
 ──────────────────────────────────────────────────────────────────────
-1    El producto llegó en...   producto llegar...   Positivo     1.0
-2    Pésimo servicio...        pésimo servicio...   Negativo    -1.0
+1    Envío rápido, el produc.. envío rápido producto.. Positivo     0.9537
+2    Pésima atención al cli.. pésimo atención clie.. Negativo    -0.9491
 ...
 
  Proceso completado. Revisa la carpeta output/
@@ -122,13 +125,14 @@ Archivos generados:
 ```
 eif4200-pid4-nlp/
 ├── main.py              # Glend — orquesta el pipeline
-├── data_loader.py       # Glend — carga CSV/Excel/TXT
+├── data_loader.py       # Glend — carga CSV/Excel/JSON/TXT
 ├── cleaner.py           # Carranza — limpieza y stop words
 ├── tokenizer.py         # Dorian — tokenización y lematización
-├── sentiment.py         # Jamel — análisis de sentimiento
+├── sentiment.py         # Jamel — análisis de sentimiento (HuggingFace + léxico)
 ├── visualizer.py        # Yeye — WordCloud y gráficos
 ├── data/
-│   └── sample_reviews.csv
+│   ├── resenas_clientes.csv
+│   └── resenas_clientes.json
 ├── output/              # Se crea automáticamente
 ├── requirements.txt
 └── README.md

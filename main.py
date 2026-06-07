@@ -3,7 +3,7 @@ main.py — Orquestación del pipeline completo de análisis de sentimiento PLN.
 Responsable: Glend
 
 Uso:
-    python main.py --input data/sample_reviews.csv
+    python main.py --input data/resenas_clientes.csv
 """
 import argparse
 import logging
@@ -132,7 +132,7 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Pipeline de Análisis de Sentimiento con PLN",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="Ejemplo:\n  python main.py --input data/sample_reviews.csv",
+        epilog="Ejemplo:\n  python main.py --input data/resenas_clientes.csv",
     )
     parser.add_argument(
         "--input",

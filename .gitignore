@@ -8,3 +8,10 @@ output/
 *.jpg
 .DS_Store
 Thumbs.db
+
+# Material del video y enunciado (no se versiona)
+generar_guion.py
+guion_video.docx
+*.docx
+GUION_VIDEO.md
+PID III.pdf
